@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">LayoutProject</string>
+    <string name="titletext">This is my layout project</string>
+    <string name="btn1text">Button 1</string>
+    <string name="btn2text">Button 2</string>
+    <string name="btn3text">Button 3</string>
+    <string name="chkbox1text">Check Box 1</string>
+    <string name="chkbox2text">Check Box 2</string>
+    <string name="chkbox3text">Check Box 3</string>
+    <string name="chkbox4text">Check Box 4</string>
+    <string name="chkbox5text">Check Box 5</string>
+    <string name="chkbox6text">Check Box 6</string>
+    <string name="imgdesctext">who\'s this goofball?</string>
 </resources>
