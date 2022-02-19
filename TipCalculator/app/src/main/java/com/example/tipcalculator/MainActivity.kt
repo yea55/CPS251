@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
             val percent10 = billVal * 1.1
             val percent15 = billVal * 1.15
             val percent20 = billVal * 1.2
-            val outputTxt = getString(R.string.tip_output_header) + getString(R.string.percent10) + percent10 + getString(R.string.percent15) + percent15 + getString(R.string.percent20) + percent20
+            val outputTxt = getString(R.string.tip_output_header) + getString(R.string.percent10) + "%.2f".format(percent10) + getString(R.string.percent15) + "%.2f".format(percent15) + getString(R.string.percent20) + "%.2f".format(percent20)
             //I hate the line above this
             binding.outputText.text = outputTxt
         }else{
