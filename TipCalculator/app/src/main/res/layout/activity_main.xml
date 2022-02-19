@@ -8,21 +8,22 @@
 
     <Button
         android:id="@+id/button"
+        android:onClick="calcTip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="CALCULATE"
+        android:text="@string/calculate"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextNumberDecimal"
+        android:id="@+id/billText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
         android:ems="10"
-        android:hint="Enter Bill Total"
+        android:hint="@string/enter_bill_total"
         android:inputType="numberDecimal"
         android:minHeight="48dp"
         app:layout_constraintBottom_toTopOf="@+id/button"
@@ -31,11 +32,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/outputText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
-        android:text="Tip amounts are as follows:\n\nPlaceholder Text\nPlaceholder Text\nPlaceholder Text"
+        android:text="Tip Amounts will display here"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
