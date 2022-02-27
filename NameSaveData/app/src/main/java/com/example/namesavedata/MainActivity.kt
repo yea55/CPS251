@@ -2,6 +2,7 @@ package com.example.namesavedata
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import com.example.namesavedata.ui.main.MainFragment
 
 class MainActivity : AppCompatActivity() {
@@ -15,4 +16,6 @@ class MainActivity : AppCompatActivity() {
                 .commitNow()
         }
     }
+
+    //fun addName(view: View) {}
 }
