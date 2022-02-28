@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.namesavedata.R
 import androidx.lifecycle.Observer
+import androidx.databinding.DataBindingUtil
 import com.example.namesavedata.databinding.MainFragmentBinding
 
 class MainFragment : Fragment() {
@@ -17,8 +18,9 @@ class MainFragment : Fragment() {
     }
 
     private lateinit var viewModel: MainViewModel
-    private var _binding: MainFragmentBinding? = null
-    private val binding get() = _binding!!
+    lateinit var binding: MainFragmentBinding
+    //private var _binding: MainFragmentBinding? = null
+    //private val binding get() = _binding!!
 
 
     override fun onCreateView(
@@ -26,13 +28,15 @@ class MainFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         //return inflater.inflate(R.layout.main_fragment, container, false)
-        _binding = MainFragmentBinding.inflate(inflater, container, false)
+       // _binding = MainFragmentBinding.inflate(inflater, container, false)
+        binding = DataBindingUtil.inflate(inflater, R.layout.main_fragment, container, false)
+        binding.setLifecycleOwner (this )
         return binding.root
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
-        _binding = null
+        //_binding = null
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
