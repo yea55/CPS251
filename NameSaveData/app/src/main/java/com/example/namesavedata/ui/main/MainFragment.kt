@@ -43,6 +43,7 @@ class MainFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
 
         viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
+        binding.outputText.text =viewModel.getNames().toString()
         binding.button.setOnClickListener{
             if(binding.nameTextBox.text.isNotEmpty()){
                 viewModel.addName(binding.nameTextBox.text.toString())
