@@ -9,7 +9,7 @@ class MainViewModel : ViewModel() {
     private var inputName : MutableLiveData<String> = MutableLiveData()
     private var names = ""//: MutableLiveData<String> = MutableLiveData()
     private var nameList: MutableList<String> = mutableListOf()
-    fun addName(value:String){
+    fun addName(value: String){
         this.namesInit = value
         names = value
         //names.value = value.toString()

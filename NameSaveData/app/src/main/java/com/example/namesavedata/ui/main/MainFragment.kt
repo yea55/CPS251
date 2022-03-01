@@ -18,9 +18,9 @@ class MainFragment : Fragment() {
     }
 
     private lateinit var viewModel: MainViewModel
-    lateinit var binding: MainFragmentBinding
-    //private var _binding: MainFragmentBinding? = null
-    //private val binding get() = _binding!!
+    //lateinit var binding: MainFragmentBinding
+    private var _binding: MainFragmentBinding? = null
+    private val binding get() = _binding!!
 
 
     override fun onCreateView(
@@ -28,15 +28,15 @@ class MainFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         //return inflater.inflate(R.layout.main_fragment, container, false)
-       // _binding = MainFragmentBinding.inflate(inflater, container, false)
-        binding = DataBindingUtil.inflate(inflater, R.layout.main_fragment, container, false)
-        binding.setLifecycleOwner (this )
+        _binding = MainFragmentBinding.inflate(inflater, container, false)
+        //binding = DataBindingUtil.inflate(inflater, R.layout.main_fragment, container, false)
+        //binding.setLifecycleOwner (this )
         return binding.root
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
-        //_binding = null
+        _binding = null
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
@@ -53,7 +53,7 @@ class MainFragment : Fragment() {
             names -> binding.outputText.text = names.toString()
 
         }
-        viewModel.getNames().observe(viewLifecycleOwner, theObserver)
+        //viewModel.getNames().observe(viewLifecycleOwner, theObserver)
 
         // TODO: Use the ViewModel
     }
